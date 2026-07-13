@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/tokens/colors.css">
+<link rel="stylesheet" href="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/tokens/presets.css">
+<link rel="stylesheet" href="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/tokens/typography.css">
+<link rel="stylesheet" href="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/tokens/base.css">
+<link rel="stylesheet" href="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/styles.css">
+<script src="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+  html,body{margin:0;background:#0e1207;}
+  *{box-sizing:border-box;}
+  @keyframes gRise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+  @keyframes gSheet{from{transform:translateY(100%)}to{transform:none}}
+  @keyframes gFade{from{opacity:0}to{opacity:1}}
+  .g-scroll::-webkit-scrollbar{display:none;}
+</style>
+</helmet>
+<div style="{{ accentVars }}--clin-light:#8dc060;--clin-tint:#eef5e7;font-family:var(--font-sans);color:#101510;min-height:100vh;display:flex;justify-content:center;background:#0e1207;">
+  <div style="width:100%;max-width:480px;min-height:100vh;background:#fbfcf9;position:relative;overflow:hidden;">
+
+    <!-- HERO -->
+    <section style="position:relative;padding:16px 20px 30px;background:linear-gradient(170deg,#12200a 0%,#213b12 55%,#2f5219 100%);color:#fff;overflow:hidden;">
+      <div style="position:absolute;top:-60px;right:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(141,192,96,.5),transparent 70%);"></div>
+      <header style="position:relative;display:flex;align-items:center;justify-content:space-between;margin-bottom:26px;">
+        <img src="assets/clinimed-logo.avif" alt="Clinimed" style="height:32px;background:#fff;padding:4px 8px;border-radius:8px;">
+        <span style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:500;background:rgba(255,255,255,.12);padding:5px 11px;border-radius:999px;backdrop-filter:blur(4px);">
+          <span style="width:6px;height:6px;border-radius:50%;background:#8dc060;"></span> JHB · Cape Town
+        </span>
+      </header>
+      <div style="position:relative;animation:gRise .6s ease both;">
+        <span style="display:inline-block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#b9dd8f;margin-bottom:12px;">The Glow-Up Studio</span>
+        <h1 style="font-size:36px;line-height:1.04;font-weight:600;letter-spacing:-.025em;margin:0 0 14px;text-wrap:balance;">Real results.<br>Real women.<br><span style="color:#a9d97f;">Real practitioners.</span></h1>
+        <p style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,.82);margin:0 0 22px;max-width:26em;">Slide through genuine Clinimed transformations — then book the same result on WhatsApp in 30 seconds.</p>
+        <button onClick="{{ openGeneral }}" style="width:100%;height:56px;border:none;border-radius:14px;background:#fff;color:#22400f;font-family:var(--font-sans);font-size:16.5px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;" style-hover="background:#eef5e7">
+          Get my transformation
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </button>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:16px;font-size:12.5px;color:rgba(255,255,255,.8);">
+          <span style="color:#f5b942;letter-spacing:1px;">★★★★★</span> 4.9 from 2,300+ reviews
+        </div>
+      </div>
+    </section>
+
+    <!-- STAT BAND -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);background:#22400f;color:#fff;">
+      <div style="text-align:center;padding:16px 4px;border-right:1px solid rgba(255,255,255,.12);">
+        <div style="font-size:22px;font-weight:600;font-family:var(--font-mono);letter-spacing:-.02em;">{{ stat1 }}</div>
+        <div style="font-size:10.5px;color:rgba(255,255,255,.7);margin-top:2px;">Transformations</div>
+      </div>
+      <div style="text-align:center;padding:16px 4px;border-right:1px solid rgba(255,255,255,.12);">
+        <div style="font-size:22px;font-weight:600;font-family:var(--font-mono);letter-spacing:-.02em;">{{ stat2 }}</div>
+        <div style="font-size:10.5px;color:rgba(255,255,255,.7);margin-top:2px;">Avg. rating</div>
+      </div>
+      <div style="text-align:center;padding:16px 4px;">
+        <div style="font-size:22px;font-weight:600;font-family:var(--font-mono);letter-spacing:-.02em;">{{ stat3 }}</div>
+        <div style="font-size:10.5px;color:rgba(255,255,255,.7);margin-top:2px;">Years, 2 clinics</div>
+      </div>
+    </div>
+
+    <!-- PROOF -->
+    <section style="padding:28px 20px 20px;">
+      <h2 style="font-size:24px;font-weight:600;letter-spacing:-.015em;margin:0 0 4px;">See the proof, then get it</h2>
+      <p style="font-size:14px;color:var(--muted-foreground);margin:0 0 18px;">Drag the slider. Filter by the result you want.</p>
+
+      <!-- filters -->
+      <div class="g-scroll" style="display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:16px;-ms-overflow-style:none;scrollbar-width:none;">
+        <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+          <button onClick="{{ f.onSelect }}" style="{{ f.style }}">{{ f.label }}</button>
+        </sc-for>
+      </div>
+
+      <!-- featured before/after slider -->
+      <div style="border-radius:20px;overflow:hidden;box-shadow:0 20px 50px -30px rgba(30,50,10,.6);border:1px solid var(--border);background:#fff;">
+        <div onPointerDown="{{ sliderDown }}" onPointerMove="{{ sliderMove }}" onPointerUp="{{ sliderUp }}" style="position:relative;aspect-ratio:4/5;overflow:hidden;touch-action:none;cursor:ew-resize;user-select:none;background:#f1f4ec;">
+          <!-- AFTER (full) -->
+          <div style="position:absolute;inset:0;">
+            <image-slot id="feat-after-{{ featuredId }}" shape="rect" placeholder="{{ featuredAfterPlaceholder }}"></image-slot>
+            <span style="position:absolute;bottom:12px;right:12px;font-size:11px;font-weight:600;letter-spacing:.06em;color:#fff;background:var(--primary);padding:4px 10px;border-radius:999px;pointer-events:none;z-index:2;">AFTER</span>
+          </div>
+          <!-- BEFORE (clipped, undistorted) -->
+          <div style="{{ beforeClipStyle }}">
+            <div style="{{ beforeInnerStyle }}">
+              <image-slot id="feat-before-{{ featuredId }}" shape="rect" placeholder="{{ featuredBeforePlaceholder }}"></image-slot>
+              <span style="position:absolute;bottom:12px;left:12px;font-size:11px;font-weight:600;letter-spacing:.06em;color:#333;background:rgba(255,255,255,.85);padding:4px 10px;border-radius:999px;pointer-events:none;z-index:2;">BEFORE</span>
+            </div>
+          </div>
+          <!-- handle -->
+          <div style="{{ handleStyle }}">
+            <div style="width:38px;height:38px;border-radius:50%;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:var(--clin-dark);">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 7-5 5 5 5"></path><path d="m15 7 5 5-5 5"></path></svg>
+            </div>
+          </div>
+        </div><div style="padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          <div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--clin-dark);">{{ featuredTag }}</div>
+            <div style="font-size:16px;font-weight:600;margin-top:2px;">{{ featuredStat }}</div>
+          </div>
+          <button onClick="{{ getFeatured }}" style="flex-shrink:0;height:44px;padding:0 18px;border:none;border-radius:12px;background:var(--primary);color:#fff;font-family:var(--font-sans);font-size:14px;font-weight:600;cursor:pointer;" style-hover="background:var(--clin-dark)">Get this result</button>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- RESULT CARDS -->
+    <section style="padding:6px 0 22px;">
+      <div class="g-scroll" style="display:flex;gap:14px;overflow-x:auto;padding:8px 20px 12px;-ms-overflow-style:none;scrollbar-width:none;scroll-snap-type:x mandatory;">
+        <sc-for list="{{ cards }}" as="c" hint-placeholder-count="4">
+          <div style="flex:0 0 200px;scroll-snap-align:start;border:1px solid var(--border);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 30px -22px rgba(30,50,10,.5);">
+            <div style="display:grid;grid-template-columns:1fr 1fr;height:150px;">
+              <div style="position:relative;">
+                <image-slot id="card-before-{{ c.id }}" shape="rect" placeholder="{{ c.beforePlaceholder }}"></image-slot>
+                <span style="position:absolute;top:8px;left:8px;font-size:9px;font-weight:600;color:#555;background:rgba(255,255,255,.85);padding:2px 6px;border-radius:6px;pointer-events:none;z-index:2;">BEFORE</span>
+              </div>
+              <div style="position:relative;">
+                <image-slot id="card-after-{{ c.id }}" shape="rect" placeholder="{{ c.afterPlaceholder }}"></image-slot>
+                <span style="position:absolute;top:8px;right:8px;font-size:9px;font-weight:600;color:#fff;background:var(--primary);padding:2px 6px;border-radius:6px;pointer-events:none;z-index:2;">AFTER</span>
+              </div>
+            </div>
+            <div style="padding:12px 14px 14px;">
+              <div style="font-size:10.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--clin-dark);">{{ c.tag }}</div>
+              <div style="font-size:15px;font-weight:600;margin:3px 0 4px;line-height:1.2;">{{ c.stat }}</div>
+              <div style="font-size:12px;color:var(--muted-foreground);margin-bottom:10px;">{{ c.name }} · {{ c.loc }}</div>
+              <button onClick="{{ c.onGet }}" style="width:100%;height:40px;border:1.5px solid var(--primary);border-radius:10px;background:#fff;color:var(--clin-dark);font-family:var(--font-sans);font-size:13px;font-weight:600;cursor:pointer;" style-hover="background:var(--clin-tint)">Get this result</button>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- VIDEO TESTIMONIALS -->
+    <sc-if value="{{ showVideos }}" hint-placeholder-val="{{ true }}">
+    <section style="padding:8px 20px 34px;">
+      <h2 style="font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0 0 14px;">In their words</h2>
+      <div class="g-scroll" style="display:flex;gap:12px;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none;scroll-snap-type:x mandatory;">
+        <sc-for list="{{ videos }}" as="v" hint-placeholder-count="3">
+          <div style="flex:0 0 150px;scroll-snap-align:start;position:relative;aspect-ratio:9/14;border-radius:16px;overflow:hidden;background:linear-gradient(160deg,#2f4a1c,#5a8e33);">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+              <span style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;color:var(--clin-dark);"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span>
+            </div>
+            <div style="position:absolute;left:0;right:0;bottom:0;padding:12px 12px 14px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;">
+              <div style="color:#f5b942;font-size:11px;letter-spacing:1px;">★★★★★</div>
+              <div style="font-size:12.5px;font-weight:600;margin-top:3px;">{{ v.name }}</div>
+              <div style="font-size:11px;opacity:.85;">{{ v.tag }}</div>
+            </div>
+            <span style="position:absolute;top:8px;left:8px;font-size:8.5px;color:#fff;background:rgba(0,0,0,.35);padding:2px 6px;border-radius:6px;">Video placeholder</span>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+    </sc-if>
+
+    <!-- CLOSING TRUST -->
+    <section style="padding:22px 20px 130px;background:var(--clin-tint);border-top:1px solid var(--border);">
+      <div style="display:grid;gap:12px;">
+        <div style="display:flex;gap:10px;align-items:flex-start;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--clin-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 2 4 5v6c0 5 3.4 7.9 8 10 4.6-2.1 8-5 8-10V5l-8-3Z"></path></svg><span style="font-size:14px;line-height:1.4;">Every treatment is performed or overseen by <strong>registered medical professionals</strong>.</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--clin-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M20 6 9 17l-5-5"></path></svg><span style="font-size:14px;line-height:1.4;">Practices in <strong>Johannesburg &amp; Cape Town</strong>, plus online consults nationwide.</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--clin-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M20 6 9 17l-5-5"></path></svg><span style="font-size:14px;line-height:1.4;">Honest advice — no pressure, no miracle-cure hype. Just real results.</span></div>
+      </div>
+    </section>
+
+    <!-- STICKY CTA -->
+    <div style="position:sticky;bottom:0;z-index:40;padding:12px 18px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--border);">
+      <button onClick="{{ openGeneral }}" style="display:flex;align-items:center;justify-content:center;gap:9px;width:100%;height:54px;border:none;border-radius:14px;background:var(--primary);color:#fff;font-size:16px;font-weight:600;font-family:var(--font-sans);cursor:pointer;box-shadow:0 12px 30px -14px rgba(90,142,51,.9);" style-hover="background:var(--clin-dark)">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 7.9 8 10 4.6-2.1 8-5 8-10V5l-8-3Z"></path></svg>
+        Book my free consultation
+      </button>
+    </div>
+
+    <!-- BOOKING SHEET -->
+    <sc-if value="{{ sheetOpen }}" hint-placeholder-val="{{ false }}">
+      <div onClick="{{ closeSheet }}" style="position:fixed;inset:0;z-index:50;background:rgba(15,20,8,.55);display:flex;align-items:flex-end;justify-content:center;animation:gFade .2s ease both;">
+        <div onClick="{{ stop }}" style="width:100%;max-width:480px;background:#fff;border-radius:22px 22px 0 0;padding:22px 22px calc(24px + env(safe-area-inset-bottom));animation:gSheet .32s cubic-bezier(.3,.9,.3,1) both;">
+          <div style="width:38px;height:4px;border-radius:2px;background:var(--border);margin:0 auto 16px;"></div>
+          <sc-if value="{{ sheetForm }}" hint-placeholder-val="{{ true }}">
+            <div>
+              <h3 style="font-size:21px;font-weight:600;letter-spacing:-.01em;margin:0 0 4px;">{{ sheetTitle }}</h3>
+              <p style="font-size:14px;color:var(--muted-foreground);margin:0 0 18px;">Two details and you're booked. We'll continue on WhatsApp.</p>
+              <div style="display:grid;gap:12px;">
+                <input value="{{ name }}" onInput="{{ setName }}" placeholder="First name" style="width:100%;height:52px;padding:0 14px;font-size:16px;font-family:var(--font-sans);border:1.5px solid var(--border);border-radius:12px;outline:none;" style-focus="border-color:var(--primary)">
+                <input value="{{ phone }}" onInput="{{ setPhone }}" inputmode="tel" placeholder="WhatsApp number" style="width:100%;height:52px;padding:0 14px;font-size:16px;font-family:var(--font-sans);border:1.5px solid var(--border);border-radius:12px;outline:none;" style-focus="border-color:var(--primary)">
+                <div>
+                  <span style="display:block;font-size:12.5px;font-weight:500;color:var(--muted-foreground);margin-bottom:7px;">Treatment of interest</span>
+                  <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                    <sc-for list="{{ treatments }}" as="t" hint-placeholder-count="5">
+                      <button onClick="{{ t.onSelect }}" style="{{ t.style }}">{{ t.label }}</button>
+                    </sc-for>
+                  </div>
+                </div>
+              </div>
+              <a href="{{ waLink }}" target="_blank" rel="noopener" onClick="{{ tryBook }}" style="{{ bookBtnStyle }}">
+                <svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.31-1.95 1.36-.5.05-1.13.24-3.65-.76-3.06-1.21-5.02-4.35-5.17-4.55-.15-.2-1.24-1.65-1.24-3.15s.79-2.24 1.07-2.54c.28-.3.61-.38.81-.38.2 0 .41 0 .59.01.19.01.44-.07.69.53.24.6.83 2.06.9 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.64-.08.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.35.07.13.07.72-.17 1.4Z"></path></svg>
+                Continue on WhatsApp
+              </a>
+              <p style="display:flex;gap:7px;align-items:flex-start;font-size:11px;line-height:1.45;color:var(--muted-foreground);margin:12px 2px 0;">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px;"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                POPIA-compliant. Your details stay private and are used only to arrange your consultation.
+              </p>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </sc-if>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:[&quot;#6a9e43&quot;,&quot;#5a8e33&quot;],&quot;tsType&quot;:&quot;string[]&quot;,&quot;options&quot;:[[&quot;#6a9e43&quot;,&quot;#5a8e33&quot;],[&quot;#c2571c&quot;,&quot;#a2481a&quot;],[&quot;#2a6fdb&quot;,&quot;#1f4f9c&quot;],[&quot;#b0473e&quot;,&quot;#8f342c&quot;]],&quot;section&quot;:&quot;Brand&quot;},&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;27727725449&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Booking&quot;},&quot;showVideoTestimonials&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;}}">
+class Component extends DCLogic {
+  state = {
+    filter: 'all',
+    sliderPct: 50,
+    counters: { c1:0, c2:0, c3:0 },
+    sheetOpen: false,
+    name:'', phone:'', treatment:'Not sure yet',
+  };
+
+  cards = [
+    { id:'fillers', tag:'Dermal Fillers', stat:'Fuller lips, natural finish', name:'Lerato K.', loc:'Cape Town' },
+    { id:'laser', tag:'Laser Hair Removal', stat:'Smooth skin in 6 sessions', name:'Zanele D.', loc:'Johannesburg' },
+    { id:'weight', tag:'Weight Loss', stat:'9 kg down in 10 weeks', name:'Thandi M.', loc:'Johannesburg' },
+    { id:'pigment', tag:'Pigmentation', stat:'Dark marks faded in 6 weeks', name:'Naledi P.', loc:'Cape Town' },
+    { id:'aesthetic', tag:'Anti-Ageing', stat:'Softer lines, refreshed look', name:'Aisha R.', loc:'Cape Town' },
+  ];
+  filters = [
+    { id:'all', label:'All results' },
+    { id:'fillers', label:'Fillers' },
+    { id:'laser', label:'Laser' },
+    { id:'weight', label:'Weight loss' },
+    { id:'pigment', label:'Pigmentation' },
+    { id:'aesthetic', label:'Anti-ageing' },
+  ];
+  treatmentOpts = ['Dermal Fillers','Laser Hair Removal','Weight Loss','Pigmentation','IV Drips','Not sure yet'];
+  videos = [
+    { name:'Thandi M.', tag:'Weight loss journey' },
+    { name:'Naledi P.', tag:'Pigmentation story' },
+    { name:'Lerato K.', tag:'Filler experience' },
+  ];
+
+  featured(){
+    if(this.state.filter==='all') return this.cards[0];
+    return this.cards.find(c=>c.id===this.state.filter) || this.cards[0];
+  }
+
+  selectFilter(id){ this.setState({ filter:id, sliderPct:50 }); }
+
+  sliderDown = (e)=>{ this._drag=true; try{ e.currentTarget.setPointerCapture(e.pointerId); }catch(x){} this.updateSlider(e); };
+  sliderMove = (e)=>{ if(this._drag) this.updateSlider(e); };
+  sliderUp = ()=>{ this._drag=false; };
+  updateSlider(e){
+    const r = e.currentTarget.getBoundingClientRect();
+    const pct = Math.max(2, Math.min(98, ((e.clientX - r.left)/r.width)*100));
+    this.setState({ sliderPct: pct });
+  }
+
+  openSheet(treatment){ this.setState({ sheetOpen:true, treatment: treatment||this.state.treatment }); }
+  closeSheet = ()=> this.setState({ sheetOpen:false });
+  stop = (e)=> e.stopPropagation();
+
+  tryBook = (e)=>{
+    if(!this.state.name.trim() || this.state.phone.replace(/\D/g,'').length<7){ e.preventDefault(); this.setState({ _shake:Date.now() }); }
+  };
+
+  componentDidMount(){ this.runCounters(); }
+  componentWillUnmount(){ if(this._counterTimer) clearInterval(this._counterTimer); }
+  runCounters(){
+    // Stepped (not rAF) on purpose: the featured slider + result cards mount several
+    // <image-slot> custom elements, and re-rendering that subtree at 60fps churns
+    // their connect/disconnect lifecycle enough to lock up the tab. ~16 steps reads
+    // as smooth while keeping re-renders infrequent.
+    const steps = 16; let i = 0;
+    this._counterTimer = setInterval(()=>{
+      i++; const k = Math.min(1, i/steps); const e = 1 - Math.pow(1-k, 3);
+      this.setState({ counters:{ c1:Math.round(12000*e), c2:4.9*e, c3:Math.round(16*e) } });
+      if(k>=1) clearInterval(this._counterTimer);
+    }, 1200/steps);
+  }
+
+  waLink(){
+    const num = (this.props.whatsappNumber || '27727725449').replace(/\D/g,'');
+    const msg = `Hi Clinimed! I'm ${this.state.name||'(name)'}. I saw your transformations and I'd love the same result with ${this.state.treatment}. Please book my free consultation.`;
+    return `https://wa.me/${num}?text=`+encodeURIComponent(msg);
+  }
+
+  palette(){ return this.props.accentColor || ['#6a9e43','#5a8e33']; }
+
+  renderVals(){
+    const s=this.state; const f=this.featured();
+    const [primary, dark] = this.palette();
+    const chip=(active)=>`flex-shrink:0;height:38px;padding:0 16px;border-radius:999px;border:1.5px solid ${active?primary:'var(--border)'};background:${active?primary:'#fff'};color:${active?'#fff':'var(--foreground)'};font-family:var(--font-sans);font-size:13.5px;font-weight:${active?600:500};cursor:pointer;white-space:nowrap;transition:.15s;`;
+    const treatChip=(active)=>`height:38px;padding:0 14px;border-radius:999px;border:1.5px solid ${active?primary:'var(--border)'};background:${active?'var(--clin-tint)':'#fff'};color:${active?dark:'var(--foreground)'};font-family:var(--font-sans);font-size:13px;font-weight:${active?600:500};cursor:pointer;transition:.15s;`;
+    const ok = s.name.trim() && s.phone.replace(/\D/g,'').length>=7;
+    const pct = s.sliderPct;
+
+    return {
+      accentVars: `--primary:${primary};--primary-foreground:#ffffff;--ring:${primary};--clin-dark:${dark};`,
+      stat1: s.counters.c1.toLocaleString()+'+',
+      stat2: s.counters.c2.toFixed(1)+'★',
+      stat3: s.counters.c3+' yrs',
+
+      filters: this.filters.map(fl=>({ label:fl.label, onSelect:()=>this.selectFilter(fl.id), style:chip(s.filter===fl.id) })),
+
+      sliderDown: this.sliderDown, sliderMove: this.sliderMove, sliderUp: this.sliderUp,
+      featuredId: f.id,
+      featuredAfterPlaceholder: `Drop ${f.name}'s AFTER photo`,
+      featuredBeforePlaceholder: `Drop ${f.name}'s BEFORE photo`,
+      beforeClipStyle: `position:absolute;inset:0;width:${pct}%;overflow:hidden;border-right:3px solid #fff;`,
+      beforeInnerStyle: `position:relative;height:100%;width:${(10000/pct).toFixed(2)}%;`,
+      handleStyle: `position:absolute;top:0;bottom:0;left:${pct}%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:3;`,
+      featuredTag: f.tag, featuredStat: f.stat,
+      getFeatured: ()=>this.openSheet(f.tag),
+
+      cards: this.cards.map(c=>({
+        tag:c.tag, stat:c.stat, name:c.name, loc:c.loc, id:c.id,
+        beforePlaceholder: `Drop ${c.name}'s BEFORE`,
+        afterPlaceholder: `Drop ${c.name}'s AFTER`,
+        onGet: ()=>this.openSheet(c.tag),
+      })),
+      videos: this.videos,
+      showVideos: this.props.showVideoTestimonials ?? true,
+
+      openGeneral: ()=>this.openSheet('Not sure yet'),
+      sheetOpen: s.sheetOpen, sheetForm: true,
+      closeSheet: this.closeSheet, stop: this.stop,
+      sheetTitle: 'Book your free consultation',
+      name:s.name, phone:s.phone,
+      setName:(e)=>this.setState({name:e.target.value}),
+      setPhone:(e)=>this.setState({phone:e.target.value}),
+      treatments: this.treatmentOpts.map(t=>({ label:t, onSelect:()=>this.setState({treatment:t}), style:treatChip(s.treatment===t) })),
+      waLink: this.waLink(),
+      tryBook: this.tryBook,
+      bookBtnStyle: `margin-top:18px;display:flex;align-items:center;justify-content:center;gap:9px;width:100%;height:54px;border-radius:14px;background:#25d366;color:#fff;font-size:16px;font-weight:600;font-family:var(--font-sans);text-decoration:none;opacity:${ok?1:.5};transition:opacity .2s;`,
+    };
+  }
+}
+</script>
+</body>
+</html>

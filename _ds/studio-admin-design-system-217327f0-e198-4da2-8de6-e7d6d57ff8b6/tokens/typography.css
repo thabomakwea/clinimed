@@ -1,0 +1,40 @@
+/* =====================================================================
+   Studio Admin — Typography tokens
+   Geist for UI text, Geist Mono for code / tabular figures.
+   The product leans on a compact type scale — most UI text is 14px
+   (text-sm) with 12px (text-xs) for meta. Tailwind's default rem
+   scale is the source of truth; named aliases below.
+   ===================================================================== */
+
+:root {
+  /* Families */
+  --font-sans: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: var(--font-sans);
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Type scale (rem; 1rem = 16px) */
+  --text-xs: 0.75rem;     /* 12px — meta, badges, captions */
+  --text-sm: 0.875rem;    /* 14px — body / default UI text */
+  --text-base: 1rem;      /* 16px — card titles */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px — page headings */
+  --text-3xl: 1.875rem;   /* 30px — KPI metric numbers */
+  --text-4xl: 2.25rem;    /* 36px */
+
+  /* Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;   /* the workhorse — buttons, titles, labels */
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line heights */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;       /* card titles */
+  --leading-normal: 1.5;       /* body copy */
+
+  /* Letter spacing */
+  --tracking-tight: -0.015em;  /* large numerals & headings */
+  --tracking-normal: 0;
+}

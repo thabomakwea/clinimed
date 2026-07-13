@@ -1,0 +1,41 @@
+/* =====================================================================
+   Studio Admin — Spacing, radius & shadow tokens
+   Spacing follows Tailwind's 4px base unit. Radius is derived from a
+   single --radius knob (0.625rem default); each step offsets from it,
+   exactly as the product's @theme inline mapping does.
+   ===================================================================== */
+
+:root {
+  /* Base spacing unit */
+  --spacing: 0.25rem;        /* 4px */
+
+  --space-1: 0.25rem;        /* 4 */
+  --space-2: 0.5rem;         /* 8 */
+  --space-3: 0.75rem;        /* 12 */
+  --space-4: 1rem;           /* 16 — default card padding */
+  --space-5: 1.25rem;        /* 20 */
+  --space-6: 1.5rem;         /* 24 — page padding (md+) */
+  --space-8: 2rem;           /* 32 */
+  --space-10: 2.5rem;        /* 40 */
+  --space-12: 3rem;          /* 48 */
+
+  /* Radius scale, derived from --radius (see colors.css) */
+  --radius-sm: calc(var(--radius) - 4px);   /* ~6px  */
+  --radius-md: calc(var(--radius) - 2px);   /* ~8px  */
+  --radius-lg: var(--radius);               /* 10px — buttons, inputs */
+  --radius-xl: calc(var(--radius) + 4px);   /* 14px — cards */
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px); /* pill badges */
+
+  /* Elevation — the default (neutral) theme is nearly flat: a hairline
+     ring + a faint xs shadow. Presets supply heavier shadow ramps. */
+  --shadow-2xs: 0 1px 2px 0 oklch(0 0 0 / 0.04);
+  --shadow-xs:  0 1px 2px 0 oklch(0 0 0 / 0.05);
+  --shadow-sm:  0 1px 3px 0 oklch(0 0 0 / 0.08), 0 1px 2px -1px oklch(0 0 0 / 0.08);
+  --shadow-md:  0 4px 6px -1px oklch(0 0 0 / 0.08), 0 2px 4px -2px oklch(0 0 0 / 0.08);
+  --shadow-lg:  0 10px 15px -3px oklch(0 0 0 / 0.08), 0 4px 6px -4px oklch(0 0 0 / 0.08);
+
+  /* Hairline used everywhere as card/edge definition */
+  --ring-hairline: oklch(0.145 0 0 / 0.10);
+}

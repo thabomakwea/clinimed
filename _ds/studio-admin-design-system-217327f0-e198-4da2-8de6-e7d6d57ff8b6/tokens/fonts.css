@@ -1,0 +1,8 @@
+/* =====================================================================
+   Studio Admin — Fonts
+   Default UI typeface is Geist; default mono is Geist Mono. The product
+   ships ~18 swappable Google fonts; these two are the defaults and the
+   ones the whole system is tuned against. Loaded from Google Fonts.
+   ===================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap");

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#f3f6ef">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#f3f6ef"/>
+    <rect x="360" y="240" width="480" height="140" rx="24" fill="#5a8e33"/>
+    <rect x="360" y="400" width="150" height="160" rx="18" fill="#ffffff" stroke="#5a8e33" stroke-width="6"/>
+    <rect x="525" y="400" width="150" height="160" rx="18" fill="#ffffff" stroke="#5a8e33" stroke-width="6"/>
+    <rect x="690" y="400" width="150" height="160" rx="18" fill="#ffffff" stroke="#5a8e33" stroke-width="6"/>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/tokens/colors.css">
+<link rel="stylesheet" href="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/tokens/typography.css">
+<link rel="stylesheet" href="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/tokens/base.css">
+<link rel="stylesheet" href="_ds/studio-admin-design-system-217327f0-e198-4da2-8de6-e7d6d57ff8b6/styles.css">
+<style>html,body{margin:0;background:#f3f6ef;}*{box-sizing:border-box;}</style>
+</helmet>
+<div style="--clin-dark:#5a8e33;--clin-tint:#eef5e7;font-family:var(--font-sans);color:#101510;min-height:100vh;background:radial-gradient(120% 60% at 50% 0%,#fff 0%,#f3f6ef 60%);padding:40px 22px 60px;">
+  <div style="max-width:860px;margin:0 auto;">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
+      <img src="assets/clinimed-logo.avif" alt="Clinimed" style="height:44px;" />
+    </div>
+    <span style="display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--clin-dark);margin-bottom:10px;">Conversion landing pages</span>
+    <h1 style="font-size:34px;line-height:1.1;font-weight:600;letter-spacing:-.02em;margin:0 0 10px;">Three ways to turn ad traffic into WhatsApp leads</h1>
+    <p style="font-size:16px;line-height:1.55;color:#5f6b52;margin:0 0 32px;max-width:60ch;">Each is a complete, mobile-first landing page for Clinimed — built to convert cold Facebook, Instagram and TikTok traffic into a booked consultation in under 60 seconds. Tap one to open it.</p>
+
+    <div style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
+      <sc-for list="{{ designs }}" as="d" hint-placeholder-count="3">
+        <a href="{{ d.href }}" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;border:1px solid var(--border);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 40px -30px rgba(40,60,20,.6);transition:transform .15s,box-shadow .15s;" style-hover="transform:translateY(-3px);box-shadow:0 20px 50px -28px rgba(40,60,20,.7)">
+          <div style="{{ d.bannerStyle }}">
+            <span style="font-size:44px;font-weight:600;font-family:var(--font-mono);color:rgba(255,255,255,.9);letter-spacing:-.03em;">{{ d.num }}</span>
+          </div>
+          <div style="padding:18px 18px 20px;flex:1;display:flex;flex-direction:column;">
+            <div style="font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--clin-dark);margin-bottom:5px;">{{ d.kicker }}</div>
+            <div style="font-size:18px;font-weight:600;letter-spacing:-.01em;margin-bottom:6px;">{{ d.title }}</div>
+            <p style="font-size:13.5px;line-height:1.45;color:#5f6b52;margin:0 0 14px;flex:1;">{{ d.desc }}</p>
+            <div style="display:flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;color:var(--clin-dark);">Open landing page <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+
+    <p style="font-size:12.5px;color:#8a9479;margin:28px 2px 0;line-height:1.5;">All three route to WhatsApp (<span style="font-family:var(--font-mono);">wa.me/27727725449</span>) with a message pre-filled from what the visitor entered. Placeholder photos and testimonials are marked for replacement with real client material.</p>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals(){
+    const banner=(a,b)=>`aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:linear-gradient(140deg,${a},${b});`;
+    return {
+      designs:[
+        { num:'01', href:'design-1-quiz.dc.html', kicker:'Smart quiz funnel', title:'Your Personal Treatment Plan',
+          desc:'A branching quiz that ends in a tailored plan, matched products and a lead gate. Feels addictive, carries medical authority.',
+          bannerStyle:banner('#5a8e33','#7fb84f') },
+        { num:'02', href:'design-2-glowup.dc.html', kicker:'Transformation experience', title:'The Glow-Up Studio',
+          desc:'Proof-first: draggable before/after sliders, animated result stats and video testimonials, with a floating booking sheet.',
+          bannerStyle:banner('#22400f','#5a8e33') },
+        { num:'03', href:'design-3-calculator.dc.html', kicker:'Package calculator', title:'Build My Package',
+          desc:'Visitors tap treatments to build a package and watch the value update live, then unlock a limited offer with their details.',
+          bannerStyle:banner('#6a9e43','#3f6b1f') },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
