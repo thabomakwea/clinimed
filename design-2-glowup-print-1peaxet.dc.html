@@ -258,8 +258,8 @@ class Component extends DCLogic {
   ];
 
   featured(){
-    if(this.state.filter==='all') return this.cards[0];
-    return this.cards.find(c=>c.id===this.state.filter) || this.cards[0];
+    if(this.state.filter==='all') return this.cards[1];
+    return this.cards.find(c=>c.id===this.state.filter) || this.cards[1];
   }
 
   selectFilter(id){ this.setState({ filter:id, sliderPct:50 }); }
